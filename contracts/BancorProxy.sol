@@ -8,8 +8,6 @@ import "./bancor/token/interfaces/IERC20Token.sol";
 import "./utils/Ownable.sol";
 
 contract BancorProxy is TokenConverter, Ownable {
-    IBancorConverter converterEthBnt;
-
     mapping(address => mapping(address => BancorConverter)) public converterOf;
     mapping(address => mapping(address => address)) public routerOf;
     mapping(address => mapping(address => IERC20Token[])) public pathCache;
